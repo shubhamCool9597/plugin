@@ -52,6 +52,7 @@ $.fn.typefast = function(a){
   $('input').blur(function() {
   var m=$(this).attr('id');
   // console.log(arr,m);
+  hint=$(hin[m]);
   $(arr[m]).css('display','none');
   $(hin[m]).css('visibility','hidden');
   })
@@ -355,7 +356,7 @@ Api.prototype ={
           if(data[1].length==0){
             // $('.loading').css('display','none');
                      }
-          $(hint).val(data[1][1].toLowerCase());
+          hint.val(data[1][1].toLowerCase());
           // console.log($(_this.ui.hint).val());
 
           for (var i = 0; i < data[1].length; i++) {
